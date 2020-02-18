@@ -1,0 +1,30 @@
+<!--pages/implement/translate/translate.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="content">成语大全</view>
+</cu-custom>
+
+<view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 成语大全
+    </view>
+</view>
+
+<view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="输入需要查注释的成语大全" maxlength="20" confirm-type="search" bindinput="input"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow-blur round" bindtap="searchTranslate">翻译</button>
+    </view>
+  </view>
+<scroll-view scroll-y="true" wx:if="{{showCh}}">
+  <view class="text-xl solids-top padding">
+    <view class="padding"><text>成语名称：</text>{{translateInfo.showapi_res_body.data.title}}</view>
+    <view class="padding"><text>拼写读音：</text>{{translateInfo.showapi_res_body.data.spell}}</view>
+    <view class="padding"><text>解释：</text>{{translateInfo.showapi_res_body.data.content}}</view>
+    <view class="padding"><text>出自典故：</text>{{translateInfo.showapi_res_body.data.derivation}}</view>
+    <view class="padding"><text>例子：</text>{{translateInfo.showapi_res_body.data.samples}}</view>
+  </view>
+</scroll-view>
+<view wx:else="{{showCh}}"></view>

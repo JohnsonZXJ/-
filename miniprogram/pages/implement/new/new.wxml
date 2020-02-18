@@ -1,0 +1,19 @@
+<!--pages/implement/new/new.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="content">精选文章</view>
+</cu-custom>
+<scroll-view scroll-y="true">
+<view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 精选文章 <text class="text-orange">[敬请期待]</text>
+    </view>
+</view>
+  <view wx:for="{{newInfo.showapi_res_body.pagebean.contentlist}}" wx:key='index' class="text-lg solids-top padding" hover-class="text-orange" bindtap="click">
+  <navigator url="/pages/implement/new/newdetail?title={{index}}">
+    <view class="flex justify-between"><image src="{{item.contentImg}}" style="height:160rpx;width:50%"></image>
+    <view style="margin-left:20rpx;width:50%"><text style="display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-all;-webkit-box-orient: vertical;-webkit-line-clamp: 3;"><text class="text-orange cuIcon-comment"></text>{{item.title}}
+    作者：{{item.userName}}</text></view>
+    </view>
+    </navigator>
+  </view>
+</scroll-view>

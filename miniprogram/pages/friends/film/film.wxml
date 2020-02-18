@@ -1,0 +1,47 @@
+<!--pages/friends/film/film.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="content">影视圈</view>
+</cu-custom>
+<scroll-view scroll-y="true">
+	<view class="cu-card dynamic">
+		<view class="cu-item shadow">
+			<view class="cu-list menu-avatar comment solids-top">
+				<view class="cu-item">
+					<view class="cu-avatar round" style="background-image:url(http://img4.imgtn.bdimg.com/it/u=3520697127,2063522423&fm=26&gp=0.jpg);"></view>
+					<view class="content">
+						<view class="text-grey">公告</view>
+						<view class="text-gray text-content text-df">
+							你好!亲爱的<open-data class='userInfo' type="userNickName" id="myName"></open-data>同学，这里是影视圈，本圈主要以影视交流为主，大家可以互相推荐好的电影，电视剧等等，<text class="text-red">如果发送评论失败请在"我的"页面再次授权</text>，切忌发与本圈无关的内容，请大家和谐相处，谢谢合作！
+						</view>
+						<view class="margin-top-sm flex justify-between">
+							<view class="text-gray text-df">2020年2月16日</view>
+							<view class="text-gray text-sm text-right" bindtap="goToFilm">
+								<text class="cuIcon-text text-gray margin-left-sm"></text> 进入电影推荐
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 评论部分 -->
+			<view class="cu-list menu-avatar comment solids-top" wx:for="{{thispageAll}}" wx:key="index">
+				<view class="cu-item">
+					<view class="cu-avatar round" style="background-image:url({{item.RImgurl}});"></view>
+					<view class="content">
+						<view class="text-grey flex justify-between">{{item.RNickname}}<text class="text-blue">{{index+1}}楼</text></view>
+						<view class="text-gray text-content text-df">
+							{{item.RContent}}
+						</view>
+						<view class="text-grey flex justify-end" bindtap="appreciateAdd">{{item.RTime}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+	<view class="action">
+		<text class="cuIcon-comment text-grey"></text>
+	</view>
+	<input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" id="contentValNew" placeholder="在此处输入评论" bindinput="contentInput" value='{{inputValue}}'></input>
+	<button class="cu-btn bg-green shadow" bindtap="contentSend">发送</button>
+</view>

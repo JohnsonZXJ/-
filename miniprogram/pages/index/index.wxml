@@ -1,0 +1,24 @@
+<!-- bindtap="showModal" data-target="DrawerModalL" -->
+<scroll-view scroll-y class="scrollPage">
+<cu-custom bgColor="bg-gradual-green">
+	<view slot="content">AIB校友会</view>
+</cu-custom>
+
+<official-account></official-account>
+
+<view class="cu-card">
+    <view class="cu-item bg-img shadow-blur" style="background-image:url(http://s.lianzhongyun.com/news/2019/0702/19d105e64250a32dde35c11275072894.png)" bindtap="toChild" data-url="/friends/friends">
+      <view class="cardTitle">
+        AIB校友会
+      </view>
+    </view>
+</view>
+<view class="cu-card">
+    <view class="cu-item bg-img shadow-blur" style="background-image:url(http://5b0988e595225.cdn.sohucs.com/images/20180703/4afc00f033ed46259111f4f6e9b7298e.jpeg)" bindtap="toChild" data-url="/implement/implement">
+      <view class="cardTitle">
+        便捷生活
+      </view>
+    </view>
+</view>
+
+</scroll-view>

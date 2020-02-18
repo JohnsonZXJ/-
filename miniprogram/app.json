@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/myInfo/myInfo",
+    "pages/implement/implement",
+    "pages/implement/tools/tools",
+    "pages/implement/express/express",
+    "pages/implement/new/new",
+    "pages/implement/new/newdetail",
+    "pages/implement/newfaker/newfaker",
+    "pages/implement/mytranslate/mytranslate",
+    "pages/implement/english/english",
+    "pages/friends/friends",
+    "pages/friends/sport/sport",
+    "pages/friends/knowledge/knowledge",
+    "pages/friends/film/film",
+    "pages/friends/found/found",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "功能",
+        "iconPath": "/images/gengduod.png",
+        "selectedIconPath": "/images/gengduo1.png"
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
+        "text": "我的",
+        "iconPath": "/images/rentou1.png",
+        "selectedIconPath": "/images/rentou.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wxbe1dc41db93a066b"
+  ]
+}

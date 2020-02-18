@@ -1,0 +1,18 @@
+/* miniprogram/pages/implement/newfaker/newfaker.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+@import "../../colorui/animation.wxss";
+page {
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white
+}
+.listAll{
+  height:300rpx;
+  display:flex
+}
+.listImg{
+  width: 200rpx;
+  height: 100%;
+}
