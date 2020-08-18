@@ -1,0 +1,52 @@
+/* pages/index/manager/manager.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+@import "../../colorui/animation.wxss";
+.page {
+  height: 100Vh;
+  width: 100vw;
+}
+
+.page.show {
+  overflow: hidden;
+}
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f5fffa;
+}
+
+.navbar {
+  flex: none;
+  display: flex;
+  background: #fff;
+}
+
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.navbar .item.active {
+  color: orange;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: orange;
+}
+.moreHidden{
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp:1;
+overflow:hidden;
+}

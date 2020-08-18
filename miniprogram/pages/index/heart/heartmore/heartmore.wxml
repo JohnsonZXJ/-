@@ -1,0 +1,31 @@
+<!--pages/index/heart/heartmore/heartmore.wxml-->
+<cu-custom bgColor="bg-gradual-red" isBack="{{true}}">
+	<view slot="content">评论</view>
+</cu-custom>
+<scroll-view scroll-y="true">
+<view class="text-left padding radius shadow-warp bg-white text-xl">
+	<view class="padding-lr bg-white">
+		<view class="padding-xs">评论区@楼主：<text class="text-cyan">{{listname}}</text></view>
+		<view class="cu-list menu-avatar comment">
+			<view class="cu-item padding solids-top" wx:for="{{list}}" wx:key='index' data-value="{{countContent}}" data-valuetest="{{listnum}}">
+				<view class="cu-avatar round" style="background-image:url({{item.MImg}});"></view>
+				<view class="content">
+					<view class="flex justify-start">
+						<view class="text-cyan">{{item.MName}}:</view>
+					</view>
+          <view class="text-grey text-lg"><text selectable="true">{{item.MContent}}</text></view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding"></view>
+<view class="cu-load bg-gradual-red {{!isLoad?'loading':'over'}}" wx:if="{{loadingbox}}"></view>
+</scroll-view>
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+	<view class="action">
+		<text class="cuIcon-comment text-grey"></text>
+	</view>
+	<input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" id="contentValNew" placeholder="@楼主{{listname}}" bindinput="contentInput" value='{{inputValue}}'></input>
+	<button class="cu-btn bg-gradual-red shadow" bindtap="contentSend">发送</button>
+</view>

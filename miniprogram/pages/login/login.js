@@ -63,17 +63,12 @@ Page({
     wx.showLoading({
       title: '加载中'
     })
-    /*
-    给13栋的小网管
-    账号201913
-    密码201913
-    */
-    if(this.data.username=='928509016'&&this.data.password=='2457893610'){
+    if(this.data.username=='cloud'&&this.data.password=='20200920'){
       app.globalData.bestUser = this.data;
       // console.log(app.globalData.bestUser);
       //测试（可删除）
       wx.setStorageSync('username', app.globalData.bestUser)
-      console.log("获取本地缓存");
+      console.log(app.globalData.bestUser);
       wx.reLaunch({
         url: '../index/index'
       })
@@ -155,16 +150,16 @@ Page({
     //获取本地数据(仅前端)
     //网管员部分
     var session1 = wx.getStorageSync('username');
-    console.log(session1);
+    // console.log(session1);
     if (!(session1 == null || session1 == "")) {
       app.globalData.bestUser = session1;
       // console.log(app.globalData.bestUser);
       wx.reLaunch({
-        url: '../index/index',
+        url: '../index/index?manager=true',
       })
     }
     var session2 = wx.getStorageSync('ptyh');
-    console.log(session2);
+    // console.log(session2);
     if (!(session2 == null || session2 == "")) {
       app.globalData.ordinaryId = session2;
       // console.log(app.globalData.bestUser);

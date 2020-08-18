@@ -1,0 +1,19 @@
+<!--pages/index/fun/fun.wxml-->
+<cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">决定就是你啦！</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom">
+	<view class="action">
+		<text class="cuIcon-title text-orange"></text>选择综合症福音ヽ(ﾟ∀ﾟ)ﾒ(ﾟ∀ﾟ)ﾉ 
+	</view>
+</view>
+<view class="container1">
+  <view class="tui-dot tui-dot-{{index+1}}" wx:for="{{circleList}}" wx:key="index"></view>
+  <view class="tui-container-in">
+    <view class="tui-content-out tui-award-{{index+1}} {{index==indexSelect?'tui-awardSelect':''}}" wx:for="{{awardList}}" wx:key="index">
+      <image class="tui-award-image" src="{{item.img}}"></image>
+    </view>
+    <view class="tui-btn-start {{isRunning?'tui-ative':''}}" bindtap="startDrawing">吃点啥呢</view>
+  </view>
+</view>

@@ -1,5 +1,0 @@
-<!--pages/implement/new/newdetail.wxml-->
-<web-view src="{{title}}"></web-view>
-
-//Todo
-

@@ -1,0 +1,349 @@
+<!--pages/wlzx/wlzx.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="content">故障查询</view>
+</cu-custom>
+<scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+<view class="cu-item {{index==TabCur?'text-blue cur':''}} text-xl " wx:for="{{navbar}}" wx:key='index' bindtap="tabSelect" data-id="{{index}}">
+    {{item}}
+  </view>
+</scroll-view>
+<!-- All -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==0}}">
+<view class="bg-white text-xl" wx:if="{{myPower}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+<!-- 13 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==1}}" >
+<view class="bg-white text-xl" wx:if="{{myPower13}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower13}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll13}}个故障,加油哦!</view>
+</view>
+<view class="{{wlzxAll13}}">
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll13}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</view>
+</scroll-view>
+<!-- 14 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==2}}">
+<view class="bg-white text-xl" wx:if="{{myPower14}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower14}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll14}}个故障,加油哦!</view>
+</view>
+<view class="{{wlzxAll14}}">
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll14}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</view>
+</scroll-view>
+<!-- 18 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==3}}">
+<view class="bg-white text-xl" wx:if="{{myPower18}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower18}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll18}}个故障,加油哦!</view>
+</view>
+<view class="{{wlzxAll18}}">
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll18}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</view>
+</scroll-view>
+<!-- 19 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==4}}">
+<view class="bg-white text-xl" wx:if="{{myPower19}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower19}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll19}}个故障,加油哦!</view>
+</view>
+<view class="{{wlzxAll19}}">
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll19}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</view>
+</scroll-view>
+<!-- 20 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==5}}">
+<view class="bg-white text-xl" wx:if="{{myPower20}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower20}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll20}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll20}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+<!-- 21 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==6}}">
+<view class="bg-white text-xl" wx:if="{{myPower21}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower21}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll21}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll21}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+<!-- 22 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==7}}">
+<view class="bg-white text-xl" wx:if="{{myPower22}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower22}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll22}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll22}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+<!-- 23 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==8}}">
+<view class="bg-white text-xl" wx:if="{{myPower23}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower23}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll23}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll23}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+<!-- 24 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==9}}">
+<view class="bg-white text-xl" wx:if="{{myPower24}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower24}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll24}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll24}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+<!-- 25 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==10}}">
+<view class="bg-white text-xl" wx:if="{{myPower25}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower25}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll25}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll25}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+<!-- 26 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==11}}">
+<view class="bg-white text-xl" wx:if="{{myPower26}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower26}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll26}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll26}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+<!-- 27 -->
+<scroll-view scroll-y="true">
+<view hidden="{{TabCur!==12}}">
+<view class="bg-white text-xl" wx:if="{{myPower27}}">
+  <view class="text-center text-blue">暂无故障</view>
+</view>
+<view wx:else="{{myPower27}}">
+<view class="bg-white text-xl">
+  <view class="text-center text-blue">剩余{{countAll27}}个故障,加油哦!</view>
+</view>
+<view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxAll27}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">序号：{{index+1}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">宿舍：{{item.home}}栋{{item.homedetail}}</view>
+    <view class="solid-bottom padding-xs">描述：{{item.errortext}}</view>
+    <view class="solid-bottom padding-xs">时间：{{item.time}}</view>
+    <view class="padding-xs flex justify-around"><button class="cu-btn bg-gradual-blue shadow" bindtap="dataDelete" data-index='{{item.number}}'>删除</button><button class="cu-btn bg-gradual-blue shadow" bindtap="watchDetail" data-index='{{item.number}}' data-second="{{item.name}}">详情</button></view>
+  </view>
+</view>
+<view style="width:100%;height:20rpx;" class="padding" ></view>
+</view>
+</view>
+</scroll-view>
+
+<view class="cu-bar tabbar bg-white foot">
+    <view class="action text-gray add-action" bindtap="goAddData">
+      <button class="cu-btn cuIcon-add bg-gradual-blue shadow"></button>
+      上报故障
+    </view>
+</view>

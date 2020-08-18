@@ -1,0 +1,31 @@
+<!--pages/static/psychological/psychological.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="content">心理健康预约流程</view>
+</cu-custom>
+<view class="cu-timeline">
+	<view class="cu-time">start</view>
+	<view class="cu-item text-cyan">
+		<view class="content bg-gradual-blue shadow-blur" bindtap="copyQQ">
+			<text>预约时间：
+周一至周五全天接受预约
+上午8:30-12:00
+下午14:00-17:00
+预约QQ:3331775707(点我复制QQ号)</text>
+		</view>
+	</view>
+  <view class="cu-item text-cyan">
+		<view class="bg-gradual-blue content">
+			<text>温馨提示：
+      1、考虑到咨询的同学较多，因此需要提前预约。当你遇到紧急情况也可以立即为你安排咨询，咨询老师随时欢迎你的到来。
+2、为了保障高效服务，请同学们在网上预约时将所属校区、空课表、专业班级等个人基本信息发送至预约咨询QQ。
+
+截取部分内容来自AIB心理健康服务站公众号推文--https://mp.weixin.qq.com/s/F-wOH6yNgwmQ3XDyw4HbBw</text>
+		</view>
+	</view>
+  <view class="cu-item text-cyan">
+		<view class="bg-gradual-blue content">
+			<text>开发者有话说：请坚信,那些没能把我们打败的,终将使我们更强,希望你的生活里处处都有阳光。✧*｡٩(ˊᗜˋ*)و✧*｡ </text>
+		</view>
+	</view>
+	<view class="cu-time">end</view>
+</view>

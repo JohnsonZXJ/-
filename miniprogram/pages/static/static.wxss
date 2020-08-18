@@ -1,0 +1,11 @@
+/* pages/static/static.wxss */
+@import "../colorui/main.wxss";
+@import "../colorui/icon.wxss";
+@import "../colorui/animation.wxss";
+.moreHidden{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow:hidden;
+  }
+  

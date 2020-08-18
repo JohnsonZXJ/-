@@ -8,7 +8,7 @@ page {
   height: 100%;
 }
 .UCenter-bg {
-  background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1581956459420&di=562ce868c12cd72733f94e114cf5211f&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2Fe3c0b0545888755063aa332272f1aab44bb85588.jpg);
+  background-image: url(http://img5.imgtn.bdimg.com/it/u=2824721192,2715131995&fm=26&gp=0.jpg);
   background-size: cover;
   height: 550rpx;
   display: flex;

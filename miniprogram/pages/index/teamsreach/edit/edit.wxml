@@ -1,0 +1,51 @@
+<!--pages/index/teamsreach/edit/edit.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="content">团队招募申请</view>
+</cu-custom>
+<view class="cu-list menu-avatar comment solids-top">
+			<view class="cu-item">
+				<view class="cu-avatar round" style="background-image:url(https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/my/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200512192916.jpg?sign=81183011a4b635f4ac0bad24e2276b2c&t=1589295629);"></view>
+				<view class="content">
+					<view class="text-grey">公告</view>
+					<view class="text-gray text-content text-df">如果招募人数已满，想要删除招募信息，请直接联系客服(在"我的"页面点击联系客服上报即可)
+					请勿发布其他无关信息，谢谢你的合作！
+					</view>
+					<view class="margin-top-sm flex justify-between">
+						<view class="text-gray text-df">2020年3月3日</view>
+						<view class="text-gray text-sm text-right">
+							<text class="cuIcon-text text-gray margin-left-sm"></text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+<form>
+<view class="cu-form-group margin-top text-xl">
+		<view class="title">招募类型</view>
+		<input placeholder="例如：App、H5等" bindinput="kindData"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">招募人员</view>
+		<input placeholder="例如：小张同学" maxlength="4" bindinput="bossData"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">团队招募</view>
+		<input placeholder="例如：JAVA后端开发人员" bindinput="nameData"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">招募人数</view>
+		<input placeholder="例如：5(最多9人)" type="number" maxlength="1" bindinput="numData"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">联系方式</view>
+		<input placeholder="最好是邮箱或者QQ" bindinput="relationData"></input>
+</view>
+<view class="cu-form-group align-start text-xl">
+		<view class="title">招募要求</view>
+		<textarea placeholder="例如：有XX开发经验，有上进心，有独立开发项目的经验等" bindinput="requestData"></textarea>
+	</view>
+  <view class="padding  text-xl">
+  <button class="cu-btn block bg-gradual-green margin-tb-sm lg" bindtap="datasetGo">
+    <text class="cuIcon-upload"></text>发送招募</button>
+</view>
+</form>

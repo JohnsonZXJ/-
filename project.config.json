@@ -4,16 +4,31 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"appid": "wx07b7de5911ec7e4e",
 	"projectname": "NewCloudDemo",
-	"libVersion": "2.8.1",
+	"libVersion": "2.11.0",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -35,12 +50,180 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": -1,
 					"name": "pages/implement/newfaker/newfaker",
 					"pathName": "pages/implement/newfaker/newfaker",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/implement/youdao/youdao",
+					"pathName": "pages/implement/youdao/youdao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/manager/manager",
+					"pathName": "pages/index/manager/manager",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/implement/certificate/certificate",
+					"pathName": "pages/implement/certificate/certificate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/friends/sport/werun/werun",
+					"pathName": "pages/friends/sport/werun/werun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": 1089
+				},
+				{
+					"id": -1,
+					"name": "pages/implement/moon/moon",
+					"pathName": "pages/implement/moon/moon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/implement/ocrtext/ocrtext",
+					"pathName": "pages/implement/ocrtext/ocrtext",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wlzx/wlzx",
+					"pathName": "pages/wlzx/wlzx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myInfo/myInfo",
+					"pathName": "pages/myInfo/myInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wlzxtry/wlzxtry",
+					"pathName": "pages/wlzxtry/wlzxtry",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wlzx/wlzxadd/wlzxadd",
+					"pathName": "pages/wlzx/wlzxadd/wlzxadd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wlzx/wlzxdetail/wlzxdetail",
+					"pathName": "pages/wlzx/wlzxdetail/wlzxdetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/fakeindex/fakeindex",
+					"pathName": "pages/index/fakeindex/fakeindex",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/heart/heart",
+					"pathName": "pages/index/heart/heart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/heart/heartmore/heartmore",
+					"pathName": "pages/index/heart/heartmore/heartmore",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/static/static",
+					"pathName": "pages/static/static",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/teamsreach/teamsreach",
+					"pathName": "pages/index/teamsreach/teamsreach",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/static/stucard/stucard",
+					"pathName": "pages/static/stucard/stucard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/static/psychological/psychological",
+					"pathName": "pages/static/psychological/psychological",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/test/test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/teamsreach/edit/edit",
+					"pathName": "pages/index/teamsreach/edit/edit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/tel/tel",
+					"pathName": "pages/index/tel/tel",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/fun/fun",
+					"pathName": "pages/index/fun/fun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/manager/manager",
+					"pathName": "pages/index/manager/manager",
 					"scene": null
 				}
 			]

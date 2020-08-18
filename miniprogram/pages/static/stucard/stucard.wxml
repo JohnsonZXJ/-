@@ -1,0 +1,36 @@
+<!--pages/static/stucard/stucard.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="content">学生证补办流程</view>
+</cu-custom>
+<view class="cu-timeline">
+	<view class="cu-time">start</view>
+	<view class="cu-item text-cyan">
+		<view class="content bg-gradual-blue shadow-blur">
+			<text>第一步：打开支付宝app，点击卡包选项</text>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587303813(1).jpg?sign=18a378bddc4ad87ac3c48dbf8b72cb82&t=1587304371" style="width:100%" mode='widthFix'></image>
+      <text>第二步：点击学生卡，选择缴费大厅</text>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587303839(1).jpg?sign=c9ad00f9fa0c22f1e8888137c162548b&t=1587304718" style="width:100%" mode='widthFix'></image>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587303882(1).jpg?sign=de365fb4edb61defd49ed5e5496836ab&t=1587304749" style="width:100%" mode='widthFix'></image>
+      <text>第三步：点击工本费，选择学生证补办</text>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587303904(1).jpg?sign=aef5d662d744904ce9b51b32a35d7922&t=1587304792" style="width:100%" mode='widthFix'></image>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587303937(1).jpg?sign=15b6c334d57fc2edb9b8129af81cfa91&t=1587304818" style="width:100%" mode='widthFix'></image>
+      <text>第四步：填写备注等，然后点击去支付选项</text>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587303953.jpg?sign=529ed30f6fddba3645fdb64d1ab46f29&t=1587304889" style="width:100%" mode='widthFix'></image>
+      <text>第五步：打开易班app，点击易班校本化选项
+（以下步骤也可用纸质版学生证补办申请，辅导员签名）</text>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587303993(1).jpg?sign=45b32ba404218e749c0a354961d6fd26&t=1587305009" style="width:100%" mode='widthFix'></image>
+      <text>第六步：选择办事大厅，点击学生证补办申请</text>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587304014(1).jpg?sign=fe72afe9003ecc1a773e839ebc14d6b1&t=1587305117" style="width:100%" mode='widthFix'></image>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/1587304035(1).jpg?sign=046058524e2396b204dfb7a4f7488fdc&t=1587305145" style="width:100%" mode='widthFix'></image>
+      <text>第七步:填写信息后点击提交，等待辅导员审核</text>
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/%E6%98%93%E7%8F%AD%E5%AD%A6%E7%94%9F%E8%AF%81%E8%A1%A5%E5%8A%9E/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200419214726.jpg?sign=e592bd994aee658900796cfba68ca97b&t=1587305197" style="width:100%" mode='widthFix'></image>
+      <text class="text-xl">最后一步:辅导员审核通过后，需本人携带一寸彩色红底照片到校易班发展中心找工作人员办理，办理时出示支付宝缴费证明</text>
+		</view>
+	</view>
+	<view class="cu-item text-cyan">
+		<view class="bg-gradual-blue content">
+			<text>温馨提示：如果对上述操作方法不太理解，可直接咨询易班中心的工作人员</text>
+		</view>
+	</view>
+	<view class="cu-time">end</view>
+</view>

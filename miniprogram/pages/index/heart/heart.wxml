@@ -1,0 +1,67 @@
+<!--pages/index/heart/heart.wxml-->
+<cu-custom bgColor="bg-gradual-red" isBack="{{true}}">
+	<view slot="content">心里话</view>
+</cu-custom>
+<scroll-view scroll-y="true">
+	<view class="cu-card dynamic">
+		<view class="cu-item shadow">
+			<view class="cu-list menu-avatar comment solids-top">
+				<view class="cu-item">
+					<view class="cu-avatar round" style="background-image:url(https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/my/heartcat2.jpg?sign=3a555aef1e0e1ff6cab9e2d5519f52b9&t=1589290469);"></view>
+					<view class="content">
+						<view class="text-grey">公告</view>
+						<view class="text-gray text-content text-df">我想听听你的心里话，你的声音，一切关于你的，我都想知道。
+						</view>
+						<view class="margin-top-sm flex justify-between">
+							<view class="text-gray text-df">2020年5月12日</view>
+							<view class="text-gray text-sm text-right">
+								<text class="cuIcon-text text-gray margin-left-sm"></text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 评论部分 -->
+			<view class="cu-list menu-avatar comment solids-top" wx:for="{{thispageAll}}" wx:key="index" data-value="{{countContent}}" data-value2="{{homelength}}" wx:for-item='itemaa'>
+				<view class="cu-item">
+					<view class="cu-avatar round" style="background-image:url(https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/my/heartcat.jpg?sign=528694b4d1b895776589c49aa75f7236&t=1589290383);"></view>
+					<view class="content">
+						<view class="text-grey flex justify-between">{{itemaa.RNickname}}<text class="text-red">{{itemaa.number}}楼</text></view>
+						<view class="text-gray text-content text-df">
+							{{itemaa.RContent}}
+						</view>
+						<view class="bg-white light padding-top text-sm">
+							<view class="flex justify-between">
+								<view class="text-grey">{{itemaa.RTime}}</view>
+								<!--<view class="cuIcon-{{appreciateIcon}} text-{{iconColor}}" bindtap="appreciateAdd">
+									{{itemaa.RFavor}}</view>-->
+							</view>
+							<view class="txtx padding-sm radius margin-top-sm  text-sm mycss">
+								<view class="flex" wx:for="{{list}}" wx:key='index' wx:for-item='item'>
+									<view wx:if="{{item.number<4}}">
+										{{item.RTime==itemaa.RTime&&item.RNickname==itemaa.RNickname?item.MName:''}}
+									</view>
+									<view wx:if="{{item.number<4}}">
+										{{item.RTime==itemaa.RTime&&item.RNickname==itemaa.RNickname?':':''}}
+									</view>
+									<view class="flex-sub text-cut" wx:if="{{item.number<4}}">
+										{{item.RTime==itemaa.RTime&&item.RNickname==itemaa.RNickname?item.MContent:''}}
+									</view>
+								</view>
+								<view class="text-grey text-right cuIcon-markfill" style="text-decoration: underline;" bindtap="moreContent" data-index='{{itemaa.RNickname}}' data-second="{{itemaa.RTime}}">共{{itemaa.Conlen}}条评论</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="cu-load bg-gradual-red {{!isLoad?'loading':'over'}}" wx:if="{{loadingbox}}"></view>
+</scroll-view>
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+	<view class="action">
+		<text class="cuIcon-comment text-grey"></text>
+	</view>
+	<input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" id="contentValNew" placeholder="在此处输入评论" bindinput="contentInput" value='{{inputValue}}'></input>
+	<button class="cu-btn bg-gradual-red shadow" bindtap="contentSend">发送</button>
+</view>

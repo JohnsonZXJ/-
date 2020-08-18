@@ -1,6 +1,4 @@
 // pages/myInfo/myInfo.js
-wx.cloud.init();
-const db = wx.cloud.database();//初始化数据库
 var app = getApp();
 Page({
 
@@ -41,16 +39,36 @@ Page({
   },
   /*赞赏作者,显示隐藏二维码*/
   LA:function(e){
-    var index = e.currentTarget.dataset.index;
-    var imgArr = this.data.imgArr;
     wx.previewImage({
-      current: imgArr[index],     //当前图片地址
-      urls: imgArr,               //所有要预览的图片的地址集合 数组形式
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
+      urls: ['https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/zsm.jpg?sign=650e344dc3db13ca666502bfa9e3e45a&t=1585635495'],
     })
   },
+
+  exit:function(){
+    wx.showModal({
+      title: '提示',
+      content: '确定退出此账号?',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          /*清除本地缓存*/
+          wx.clearStorage();
+          wx.clearStorageSync();
+          app.globalData.userInfo=null;
+          app.globalData.bestUser = null;
+          app.globalData.ordinaryId = null;
+          app.globalData.myuserInfo = null;
+          console.log('本地缓存已清除')
+          wx.reLaunch({
+            url: '../login/login',
+          });
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

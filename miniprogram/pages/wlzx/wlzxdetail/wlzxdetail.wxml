@@ -1,0 +1,12 @@
+<!--pages/wlzx/wlzxdetail/wlzxdetail.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="content">详情信息</view>
+</cu-custom><view class="text-left padding radius shadow-warp margin-top bg-white text-xl"  wx:for="{{wlzxdetail}}" wx:key='index'> 
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding-xs">学号：{{item.number}}</view>
+    <view class="solid-bottom padding-xs">姓名：{{item.name}}</view>
+    <view class="solid-bottom padding-xs">身份证：{{item.id}}</view>
+    <view class="solid-bottom padding-xs">安朗状态：{{item.alzt}}</view>
+    <view class="padding-xs">时间：{{item.time}}</view>
+  </view>
+</view>

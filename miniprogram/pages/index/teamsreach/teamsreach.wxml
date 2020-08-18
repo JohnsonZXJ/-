@@ -1,0 +1,51 @@
+<!--pages/index/teamsreach/teamsreach.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="content">团队招募</view>
+</cu-custom>
+<scroll-view scroll-y="true">
+	<view class="padding">
+		<view class="cu-list menu-avatar comment solids-top">
+			<view class="cu-item">
+				<view class="cu-avatar round" style="background-image:url(https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/my/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200512192916.jpg?sign=81183011a4b635f4ac0bad24e2276b2c&t=1589295629);"></view>
+				<view class="content">
+					<view class="text-grey">公告</view>
+					<view class="text-gray text-content text-df">专为上进学生打造的功能———校内团队招募，想要找个志同道合的人共创一片天？赶紧点击右下角招募团队吧！[所有学院都可以发布招募信息]
+					</view>
+					<view class="margin-top-sm flex justify-between">
+						<view class="text-gray text-df">2020年3月3日</view>
+						<view class="text-gray text-sm text-right">
+							<text class="cuIcon-text text-gray margin-left-sm"></text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="cu-list menu-avatar comment solids-top solids-bottom" wx:for="{{Teamlist}}" wx:key='index' wx:for-item="itemm">
+			<block>
+				<view class="cu-item">
+					<view class="cu-avatar round" style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589305230674&di=6099087129b4876a6fc0cb34899cedca&imgtype=0&src=http%3A%2F%2Fwww.dajiazhao.com%2Fuploads%2Fallimg%2F150323%2F2-15032314445j58.jpg);"></view>
+					<view class="content">
+						<view class="text-green" style="font-size:50rpx">{{itemm.Tkind}}</view>
+						<view class="margin-top-sm">
+							<view class="text-gray" style="font-size:30rpx">团队招募:</view>{{itemm.Tname}}
+							<view class="text-gray text-content solid-top" style="font-size:30rpx">招募人员:</view>{{itemm.Tboss}}
+							<view class="text-gray text-content solid-top" style="font-size:30rpx">招募要求:</view>{{itemm.Trequest}}
+							<view class="text-gray text-content solid-top" style="font-size:30rpx">招募人数:</view>{{itemm.Tnum}}
+							<view class="text-gray text-content solid-top" style="font-size:30rpx">联系方式:</view>{{itemm.Trelation}}
+						</view>
+						<view class="margin-top-sm flex justify-between">
+							<view class="text-gray text-df">{{itemm.Ttime}}</view>
+							<view class="text-gray text-sm text-right">
+								<text class="cuIcon-text text-gray margin-left-sm"></text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</view>
+		<view style="width:100%;height:20rpx;" class="padding"></view>
+		<view bindtap="add">
+			<image class="add_icon" src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/add.png?sign=e4dac1a421d22b6b9840512080d36cf8&t=1587290831"></image>
+		</view>
+	</view>
+</scroll-view>

@@ -1,0 +1,63 @@
+<!--pages/index/manager/manager.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="content">管理员模式</view>
+</cu-custom>
+<view class="navbar">
+  <view wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</view>
+</view>
+
+
+<!--评论审核ydq-->
+<view hidden="{{currentTab!==0}}" >
+<view class="cu-bar bg-white solid-bottom">
+<view class="action">
+<text class="cuIcon-title text-orange "></text> 列表左滑
+</view>
+</view>
+<view class="cu-list menu-avatar">
+<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}"  
+wx:for="{{thispageAll}}" wx:key="index" bindtouchstart="ListTouchStart" 
+bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" 
+data-target="move-box-{{index}}">
+<view class="cu-avatar round lg" style="background-image:url({{item.RImgurl}});"></view>
+<view class="content">
+<view class="text-grey">{{item.RNickname}}</view>
+<view class="text-gray text-sm moreHidden">{{item.RContent}}</view>
+</view>
+<view class="action">
+<view class="text-grey text-xs">{{item.RTime}}</view>
+<view class="cu-tag round bg-orange sm">1</view>
+</view>
+<view class="move">
+<view class="bg-gradual-orange" bindtap="DataDel" data-src="{{item._id}}" data-times="{{item.RTime}}" data-names="{{item.RNickname}}">删除</view>
+</view>
+</view>
+</view>
+
+</view>
+<!--评论审核swzlq-->
+<view hidden="{{currentTab!==1}}">
+<view class="cu-bar bg-white solid-bottom">
+<view class="action">
+<text class="cuIcon-title text-orange "></text> 列表左滑
+</view>
+</view>
+<view class="cu-list menu-avatar">
+<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" 
+wx:for="{{thisteam}}" wx:key="index" bindtouchstart="ListTouchStart" 
+bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" 
+data-target="move-box-{{index}}">
+<view class="cu-avatar round lg" style="background-image:url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2164486254,526367521&fm=26&gp=0.jpg);"></view>
+<view class="content">
+<view class="text-grey">{{item.Tboss}}</view>
+<view class="text-gray text-sm moreHidden">{{item.Trequest}}</view>
+</view>
+<view class="action">
+<view class="cu-tag round bg-orange sm">{{item.Tnum}}</view>
+</view>
+<view class="move">
+<view class="bg-gradual-orange" bindtap="DataDel2" data-src="{{item._id}}">删除</view>
+</view>
+</view>
+</view>
+</view>

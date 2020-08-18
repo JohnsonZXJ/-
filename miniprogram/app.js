@@ -1,7 +1,35 @@
 //app.js
 App({
   onLaunch: function () {
-    
+    // 检测新版本
+    if (wx.getUpdateManager) {
+      const updateManager = wx.getUpdateManager();
+      updateManager.onCheckForUpdate(res => {
+        // 请求完新版本信息的回调.
+      })
+      updateManager.onUpdateReady(() => {
+        wx.showModal({
+          title: '更新提示',
+          content: '新版本已经准备好，是否重启应用？',
+          success(res) {
+            if (res.confirm) {
+              // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+              updateManager.applyUpdate();
+            }
+          }
+        })
+      });
+      updateManager.onUpdateFailed(() => {
+        // 新的版本下载失败
+      });
+    } else {
+      // 如果希望用户在最新版本的客户端上体验您的小程序，可以这样子提示
+      wx.showModal({
+        title: '提示',
+        content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
+      });
+    }
+
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -10,7 +38,7 @@ App({
         //   env 参数决定接下来小程序发起的云开发调用（wx.cloud.xxx）会默认请求到哪个云环境的资源
         //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
         //   如不填则使用默认环境（第一个创建的环境）
-        // env: 'my-env-id',
+        env: 'wlzx-q5sjr',
         traceUser: true,
       })
     }
@@ -54,75 +82,10 @@ App({
       }
     })
   },
-  getExpressInfo:function(nu,cb){
-    wx.request({
-      url: 'https://route.showapi.com/64-19?showapi_appid=145813&showapi_sign=deb6cb771c3c436e8c42800027592ecd&com=auto&nu='+nu, //仅为示例，并非真实的接口地址
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'enctype': 'application/x-www-form-urlencoded' // 默认值
-      },
-      success:function(res) {
-        cb(res.data)
-      },
-    })
-  },
-  getTranslation:function(keyword,ql){
-    wx.request({
-      url: 'https://route.showapi.com/1196-2?showapi_appid=145813&showapi_sign=deb6cb771c3c436e8c42800027592ecd&keyword='+keyword, //仅为示例，并非真实的接口地址
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'enctype': 'application/x-www-form-urlencoded' // 默认值
-      },
-      success:function(res) {
-        ql(res.data)
-      },
-    })
-  },
-  getNewInfo:function(nl){
-    wx.request({
-      url: 'https://route.showapi.com/582-2?showapi_appid=145813&showapi_sign=deb6cb771c3c436e8c42800027592ecd', //仅为示例，并非真实的接口地址
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'enctype': 'application/x-www-form-urlencoded' // 默认值
-      },
-      success:function(res) {
-        nl(res.data)
-      },
-      false:function(res){
-        
-      }
-    })
-  },
-  getEnglishInfo:function(el){
-    wx.request({
-      url: 'https://route.showapi.com/1211-1?showapi_appid=145813&showapi_sign=deb6cb771c3c436e8c42800027592ecd&count=10', //仅为示例，并非真实的接口地址
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'enctype': 'application/x-www-form-urlencoded' // 默认值
-      },
-      success:function(res) {
-        el(res.data)
-      },
-      false:function(res){
-        
-      }
-    })
-  },
   globalData: {
     userInfo: null,
     ordinaryId: null,
+    bestUser: null,
     myuserInfo: null
   }
 })

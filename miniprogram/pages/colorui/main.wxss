@@ -1249,14 +1249,14 @@ button.icon.lg {
 }
 
 .cu-list>.cu-item.move-cur {
-	transform: translateX(-260rpx)
+	transform: translateX(-150rpx)
 }
 
 .cu-list>.cu-item .move {
 	position: absolute;
 	right: 0;
 	display: flex;
-	width: 260rpx;
+	width: 150rpx;
 	height: 100%;
 	transform: translateX(100%)
 }

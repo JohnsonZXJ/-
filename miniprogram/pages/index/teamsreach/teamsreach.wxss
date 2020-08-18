@@ -1,0 +1,12 @@
+/* pages/index/teamsreach/teamsreach.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+@import "../../colorui/animation.wxss";
+
+.add_icon {
+  position: fixed;
+  width: 42px;
+  height: 42px;
+  bottom: 30px;
+  right: 20px;
+}

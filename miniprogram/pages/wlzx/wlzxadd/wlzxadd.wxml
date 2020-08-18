@@ -1,0 +1,38 @@
+<!--miniprogram/pages/wlzx/wlzxadd/wlzxadd.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="content">上报电信故障</view>
+</cu-custom>
+<form>
+<view class="cu-form-group margin-top text-xl">
+		<view class="title">用户</view>
+		<input placeholder="例如：张三" bindinput="nameData"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">学号</view>
+		<input placeholder="例如：20185533XXX" maxlength="11" bindinput="numData" type="number"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">栋数</view>
+		<input placeholder="例如：26" maxlength="2" bindinput="homeData" type="number"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">宿舍</view>
+		<input placeholder="例如：A401或者4001" bindinput="homedetailData"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">身份证号</view>
+		<input placeholder="例如：44058XXXXXXXXXXXXX" bindinput="idData"></input>
+</view>
+<view class="cu-form-group text-xl">
+		<view class="title">安朗状态</view>
+		<input placeholder="例如：在线或者不在线" maxlength="3" bindinput="alztData"></input>
+</view>
+<view class="cu-form-group align-start text-xl">
+		<view class="title">故障描述</view>
+		<textarea maxlength="100" bindinput="textareaBInput1" placeholder="例如网页显示404"></textarea>
+	</view>
+  <view class="padding  text-xl">
+  <button class="cu-btn block bg-gradual-blue margin-tb-sm lg" bindtap="datasetGo">
+    <text class="cuIcon-upload"></text> 录入数据</button>
+</view>
+</form>

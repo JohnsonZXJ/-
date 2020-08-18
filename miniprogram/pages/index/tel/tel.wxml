@@ -1,0 +1,31 @@
+<!--pages/index/tel/tel.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">校园通讯录</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom">
+	<view class="action">
+		<text class="cuIcon-title text-orange"></text> [点击<view class="cuIcon-phone text-green"></view>即可拨打电话]
+	</view>
+</view>
+<view class="cu-list menu-avatar padding">
+	<view class="cu-item margin-bottom" wx:for="{{list}}" wx:key="index">
+		<view class="cu-avatar round lg" style="background-image:url({{item.url}});">
+		</view>
+		<view class="content">
+			<view class="text-grey">
+				<text class="text-cut">{{item.name}}</text>
+			</view>
+			<view class="text-gray text-sm flex">
+				<text class="text-cut">{{item.text}}</text>
+			</view>
+		</view>
+		<view class="action" bindtap="makephone" data-phone="{{item.phone}}">
+			<view class="text-green text-xs">{{item.phone}}</view>
+			<view class="cuIcon-phone text-green"></view>
+		</view>
+	</view>
+	<button class="cu-btn block bg-gradual-green lg" bindtap="morerelation">
+		<text class="cuIcon-link iconfont-spin"></text>点我看各部门联系电话
+	</button>
+</view>

@@ -1,24 +1,63 @@
 <!-- bindtap="showModal" data-target="DrawerModalL" -->
-<scroll-view scroll-y class="scrollPage">
-<cu-custom bgColor="bg-gradual-green">
-	<view slot="content">AIB校友会</view>
-</cu-custom>
-
-<official-account></official-account>
-
-<view class="cu-card">
-    <view class="cu-item bg-img shadow-blur" style="background-image:url(http://s.lianzhongyun.com/news/2019/0702/19d105e64250a32dde35c11275072894.png)" bindtap="toChild" data-url="/friends/friends">
-      <view class="cardTitle">
-        AIB校友会
-      </view>
-    </view>
+<view style="height:100vh" class="bg-white">
+	<view class="bg-img padding-tb-xl" style="background-image: url('https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/timg.jpg?sign=c23601100f9ac37156f53b46c5e63f81&t=1584704588');height: 414rpx;">
+		<view class="padding-xl text-white">
+			<view class="padding-xs text-xl">
+				AIB校友会
+			</view>
+			<view class="padding-xs">
+				alumni association
+			</view>
+		</view>
+	</view>
+	<view class="indexFrame2">
+		<view class="cu-bar bg-white solid-bottom">
+			<view class="action">
+				<text class="cuIcon-commentfill text-green"></text>相约AIB
+			</view>
+		</view>
+		<view class="cu-list grid col-3 no-border'">
+			<view class="cu-item">
+				<view class="cuIcon-discover text-blue" bindtap="toChild" data-url="/index/teamsreach/teamsreach">
+				</view>
+				<text>团队招募</text>
+			</view>
+      <view class="cu-item">
+				<view class="cuIcon-command text-cyan" bindtap="toChild" data-url="/implement/implement">
+				</view>
+				<text>便捷生活</text>
+			</view>
+      <view class="cu-item">
+				<view class="cuIcon-like text-orange" bindtap="toChild" data-url="/index/heart/heart">
+				</view>
+				<text>心里话</text>
+			</view>
+			<view class="cu-item">
+				<view class="cuIcon-community text-yellow" bindtap="toChild" data-url="/static/static">
+				</view>
+				<text>生活君</text>
+			</view>
+			<view class="cu-item">
+				<view class="cuIcon-addressbook text-green" bindtap="toChild" data-url="/index/tel/tel">
+				</view>
+				<text>通讯录</text>
+			</view>
+			<view class="cu-item">
+				<view class="cuIcon-shake text-pink" bindtap="toChild" data-url="/index/fun/fun">
+				</view>
+				<text>吃什么</text>
+			</view>
+			<view class="cu-item" wx:if="{{manager}}">
+				<view class="cuIcon-friend text-purple" bindtap="toChild" data-url="/wlzx/wlzx">
+				</view>
+				<text>网管通道</text>
+			</view>
+			<view class="cu-item" wx:if="{{manager}}">
+				<view class="cuIcon-rank text-brown" bindtap="toChild" data-url="/index/manager/manager">
+				</view>
+				<text>管理员</text>
+			</view>
+			<view wx:else="{{manager}}"></view>
+		</view>
+	</view>
 </view>
-<view class="cu-card">
-    <view class="cu-item bg-img shadow-blur" style="background-image:url(http://5b0988e595225.cdn.sohucs.com/images/20180703/4afc00f033ed46259111f4f6e9b7298e.jpeg)" bindtap="toChild" data-url="/implement/implement">
-      <view class="cardTitle">
-        便捷生活
-      </view>
-    </view>
-</view>
-
-</scroll-view>

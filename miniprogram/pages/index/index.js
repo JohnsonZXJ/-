@@ -1,19 +1,37 @@
 //index.js
-var app = getApp();
+const app = getApp();
 Page({
-  CustomBar: app.globalData.CustomBar,
+
   /**
    * 页面的初始数据
    */
   data: {
-    
+    manager: false
   },
-
+  toChild(e) {
+    console.log(wx.getStorageSync('myuserInfo'))
+    if(wx.getStorageSync('myuserInfo')){
+      wx.navigateTo({
+        url: '/pages' + e.currentTarget.dataset.url
+      })
+    }else{
+      setTimeout(function(){
+        wx.showToast({
+          title: '请点击"我的"授权个人信息',
+          icon: 'none'
+        })
+      },2000)
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    if(wx.getStorageSync('username')){
+      this.setData({
+        manager: true
+      })
+    }
   },
 
   /**
@@ -45,52 +63,9 @@ Page({
   },
 
   /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
 
-  }
-})
-Component({
-  options: {
-    addGlobalClass: true,
-  },
-  data: {
-    
-  },
-  methods: {
-    toChild(e) {
-      var check = wx.getStorageSync('myuserInfo')
-      console.log(check)
-      if(check){
-        wx.navigateTo({
-          url: '/pages' + e.currentTarget.dataset.url
-        })
-      }else{
-        setTimeout(function(){
-          wx.navigateTo({
-            url: '/pages/myInfo/myInfo'
-          })
-          wx.showToast({
-            title: '请点击"我的"授权个人信息',
-            icon: 'none'
-          })
-        },2000)
-      }
-    },
   }
 })

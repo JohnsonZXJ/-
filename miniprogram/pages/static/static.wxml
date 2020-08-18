@@ -1,0 +1,68 @@
+<!--pages/static/static.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="content">生活君</view>
+</cu-custom>
+<scroll-view scroll-y class="scrollPage">
+  <view class="cu-card article">
+  <view class="cu-item shadow" bindtap="goTools">
+    <view class="title">
+      <view class="text-cut text-blue">关于网络中心网络自助维护解决方案、中心电话等等。</view>
+    </view>
+    <view class="content">
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/1.jpg?sign=93371daa48bcefa42ce6c568abe8711c&t=1585632411" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content">由网络中心网络组成员编写的关于网络故障自助维护的文档,用户可以根据文档自己解决问题。</view>
+        <view>
+          <view class="cu-tag bg-blue light sm round">自己动手,生活无忧</view>
+          <view class="cu-tag bg-red light sm round">hot</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item shadow" bindtap="showPic">
+    <view class="title">
+      <view class="text-cut text-blue">关于校医室开放时间表以及注意事项</view>
+    </view>
+    <view class="content">
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/help.jpg?sign=1f82988d3055c8181a548b0548cdc9c1&t=1585634683" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content">温馨提示:如果是夜间外出看病,务必告知同班同学或舍友,最好有人陪同,安全第一。</view>
+        <view>
+          <view class="cu-tag bg-green light sm round">便捷</view>
+          <view class="cu-tag bg-red light sm round">hot</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item shadow" bindtap="stuCard">
+    <view class="title">
+      <view class="text-cut text-blue">关于学生证的补办流程</view>
+    </view>
+    <view class="content">
+      <image src="https://776c-wlzx-q5sjr-1258985448.tcb.qcloud.la/idcard_%E5%89%AF%E6%9C%AC.jpg?sign=a48e6dafa194697b35cac4281a79d971&t=1587303032" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content">点击查看完整流程。</view>
+        <view>
+          <view class="cu-tag bg-green light sm round">便捷</view>
+          <view class="cu-tag bg-red light sm round">hot</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item shadow" bindtap="psyGo">
+    <view class="title">
+      <view class="text-cut text-blue">关于心理咨询的预约流程</view>
+    </view>
+    <view class="content">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588681948962&di=3e4a9824a5892c878b55ea609ceeb72f&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F7LsWdDW5_xN3otqbppnN2DJv%2Fzhidao%2Fpic%2Fitem%2F37d3d539b6003af376ade300332ac65c1038b6be.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content">点击查看心理咨询预约的流程。
+        (愿你被世界温柔以待)</view>
+        <view>
+          <view class="cu-tag bg-orange light sm round">一定要好好爱自己呀！</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</scroll-view>

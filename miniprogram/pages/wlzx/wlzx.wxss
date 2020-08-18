@@ -1,0 +1,7 @@
+/* pages/wlzx/wlzx.wxss */
+@import "../colorui/main.wxss";
+@import "../colorui/icon.wxss";
+@import "../colorui/animation.wxss";
+page {
+  padding-bottom: 150rpx;
+}
