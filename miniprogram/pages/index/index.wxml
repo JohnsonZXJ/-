@@ -22,11 +22,11 @@
 				</view>
 				<text>团队招募</text>
 			</view>
-      <view class="cu-item">
+      <!-- <view class="cu-item">
 				<view class="cuIcon-command text-cyan" bindtap="toChild" data-url="/implement/implement">
 				</view>
 				<text>便捷生活</text>
-			</view>
+			</view> -->
       <view class="cu-item">
 				<view class="cuIcon-like text-orange" bindtap="toChild" data-url="/index/heart/heart">
 				</view>
@@ -42,11 +42,11 @@
 				</view>
 				<text>通讯录</text>
 			</view>
-			<view class="cu-item">
+			<!-- <view class="cu-item">
 				<view class="cuIcon-shake text-pink" bindtap="toChild" data-url="/index/fun/fun">
 				</view>
 				<text>吃什么</text>
-			</view>
+			</view> -->
 			<view class="cu-item" wx:if="{{manager}}">
 				<view class="cuIcon-friend text-purple" bindtap="toChild" data-url="/wlzx/wlzx">
 				</view>

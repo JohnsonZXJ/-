@@ -10,7 +10,7 @@
   <view class="weui-cell">
     <view class="weui-cell__hd">
       <view class="weui-label">账号</view>
-      <input class="username" id="username" maxlength="11" type="number" placeholder="请输入账号" bindinput="userNameinput"></input>
+      <input class="username" id="username" maxlength="11" type="" placeholder="请输入账号" bindinput="userNameinput"></input>
     </view>
   </view>
   <view class="weui-cell" style="border-bottom:1px solid #F2F2F2">
